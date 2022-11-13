@@ -1,0 +1,34 @@
+@import './common/styles/sass/variables';
+
+.App {
+  .app-wrapper-content {
+    margin: 0 auto;
+    background: $bgPrimary;
+    width: 1920px;
+    // height: 4096px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .App {
+    .app-wrapper-content {
+      width: 1440px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .App {
+    .app-wrapper-content {
+      width: 768px;
+    }
+  }
+}
+  @media screen and (max-width: 375px) {
+    .App {
+      .app-wrapper-content {
+        width: 355px;
+      }
+    }
+  }

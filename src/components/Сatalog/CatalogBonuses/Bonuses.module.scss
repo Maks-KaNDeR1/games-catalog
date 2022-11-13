@@ -1,0 +1,164 @@
+@import '../../../common/styles/sass/variables';
+
+
+.bonuses {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 80px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        width: 276px;
+        height: 234px;
+        // margin: 12px;
+
+        border: 2px solid $secondaryColor;
+        border-radius: 15px;
+
+        img {
+            margin-top: 26px;
+        }
+
+        &:nth-child(4) {
+            img {
+                margin-top: 30px;
+            }
+        }
+
+        &__title {
+            align-items: center;
+            text-align: center;
+
+            margin-top: 22px;
+            width: 234px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+        transition: 0.3s;
+
+        &:hover {
+            scale: 1.03;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .bonuses {
+        display: flex;
+        width: 642px;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            cursor: pointer;
+            margin-bottom: 24px;
+            padding: 0 14px 0 16px;
+
+            width: 308px;
+            height: 94px;
+
+            img {
+                margin-top: 26px;
+                width: 27px;
+                height: 32px;
+            }
+
+            &__title {
+                align-items: flex-start;
+                text-align: start;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .catalogFooter {
+        margin-top: 32px;
+
+        h3,
+        h5 {
+            margin-top: 24px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        span {
+            width: 343px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .bonuses {
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            margin-bottom: 16px;
+            width: 319px;
+            height: 94px;
+            align-items: center;
+
+            img {
+                align-items: center;
+                margin-top: 0;
+                height: 32px;
+                width: 32px;
+                margin-left: 0;
+            }
+
+            &:nth-child(4) {
+                img {
+                    margin-top: -2px;
+                }
+            }
+
+            &__title {
+                align-items: flex-start;
+                text-align: start;
+
+                margin-left: 22px;
+                margin-top: 0;
+                // width: 234px;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}

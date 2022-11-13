@@ -1,0 +1,189 @@
+@import '../../common/styles/sass/variables';
+
+header {
+    width: 1920px;
+    height: 105px;
+    background: $bgPrimary;
+
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 33px 48px;
+
+        &__logo {
+            margin: -30px 0 0 -48px;
+        }
+
+        &__searchBlock {
+            position: relative;
+            height: 39px;
+            display: flex;
+            align-items: center;
+
+            .header__buttonSearch {
+                border-radius: 40px 0px 0px 40px;
+                border-color: $textColor;
+                border: 1px solid $textColor;
+                color: $bgPrimary;
+                background-color: $textColor;
+                font-weight: bold;
+                width: 101px;
+                height: 39px;
+
+                outline: none;
+            }
+
+            .header__input {
+                outline: none;
+                height: 39px;
+                width: 654px;
+                background-color: $bgPrimary;
+                border: 1px solid $textColor;
+                border-radius: 0px 40px 40px 0px;
+                padding: 0 15px;
+                font-size: 23px;
+                color: $textColor;
+
+                // margin: 15px 0 0 17px;
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                    margin-right: 23px;
+
+                }
+            }
+
+            .header__iconSearch {
+                position: absolute;
+                right: 18px;
+                margin-top: -5px;
+
+
+                img {
+                    cursor: pointer;
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+
+        &__icons {
+            display: flex;
+
+            &__icon {
+                cursor: pointer;
+                margin: 0 0 0 23px;
+                position: relative;
+                transition: 0.5s;
+
+                i {
+                    position: absolute;
+                    font-size: 26px;
+                    // top: 200px;
+                    // left: 50px;
+                }
+
+                &:hover {
+                    scale: 1.13;
+                }
+            }
+
+            :nth-child(2) {
+                i {
+                    padding: 6px 2px 6px 9px;
+                }
+
+                .iconTitle {
+                    left: -2px;
+                }
+            }
+
+            :nth-child(3) {
+                i {
+                    padding: 6px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    header {
+        width: 1440px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 768px;
+        height: 94px;
+
+        padding: 0 41px 0 0;
+
+        .header {
+            &__searchBlock {
+                .header__input {
+                    outline: none;
+                    height: 39px;
+                    width: 345px;
+                    border-radius: 40px;
+                }
+            }
+
+            &__icons {
+                display: flex;
+                margin-top: 6px;
+                margin-left: 0;
+
+                &__icon {
+                    img {
+                        width: 23px;
+                        height: 23px;
+                    }
+
+                    &:nth-child(1) {
+                        img {
+                            // margin-top: 2px;
+                            width: 21px;
+                            height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        width: 375px;
+        height: 94px;
+        padding: 0 20px 0 0;
+
+        .header {
+            padding: 33px 14px;
+
+            &__logo {
+                margin: -10px 0 0 -28px;
+
+                img {
+                    width: 150px;
+                }
+            }
+
+            &__searchBlock {
+                .header__input {
+                    outline: none;
+                    height: 29px;
+                    width: 105px;
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+}

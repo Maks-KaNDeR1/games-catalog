@@ -1,0 +1,146 @@
+@import '../../common/styles/sass/variables';
+
+.footer {
+    position: relative;
+    height: 250px;
+    padding: 14px 367.5px 17px 367.5px;
+    background-color: $bgPrimary;
+
+    &__partition {
+        margin: 0;
+        background-color: $secondaryColor;
+    }
+
+    &__content {
+        padding-top: 18px;
+
+        .footer__items {
+
+            display: grid;
+            grid-template-columns: 255px 792px 160px;
+
+            &__links {
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+
+                span {
+                    cursor: pointer;
+                    color: #fff;
+                    margin-top: 17px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    transition: 0.3s;
+
+                    &:hover {
+                        scale: 1.02;
+                        color: $primaryColor;
+                    }
+                }
+
+                &:nth-child(2) {
+                    span {
+                        &:hover {
+                            scale: 1.002;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 65px;
+            margin-right: 2px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 130%;
+            color: #AAAAAA;
+        }
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .footer {
+        padding: 14px 129.5px 17px 129.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 642px;
+        margin-top: 64px;
+        padding: 14px 48px 24px 48px;
+        height: 104px;
+
+        &__partition {
+            width: 642px;
+            margin: 0;
+            background-color: $secondaryColor;
+        }
+
+        &__content {
+
+            padding-top: 2px;
+
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+
+            flex-direction: column;
+            align-content: center;
+            width: 642px;
+
+            margin-top: 0;
+            margin-right: 2px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 130%;
+            color: #AAAAAA;
+
+            span {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .footer {
+        width: 316px;
+        padding: 14px 16px 24px 16px;
+        height: 100px;
+
+        &__partition {
+            width: 316px;
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+
+            flex-direction: column;
+            align-content: center;
+            width: 316px;
+
+            margin-top: 0;
+            margin-right: 2px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 130%;
+            color: #AAAAAA;
+
+            span {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}
